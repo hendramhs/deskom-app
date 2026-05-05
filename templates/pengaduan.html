@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pengaduan - Deskom</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">DESKOM</div>
+      <nav class="nav">
+        <a href="/">Beranda</a>
+        <a href="/pengajuan">Pengajuan Surat</a>
+        <a class="active" href="/pengaduan">Pengaduan</a>
+        <a href="/tracking">Tracking</a>
+      </nav>
+    </header>
+
+    <main class="container narrow">
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Pengaduan Warga</h2>
+          <p>Tulis pengaduan atau masukan agar segera ditindaklanjuti.</p>
+        </div>
+
+        <form class="form" method="POST">
+          <label class="field">
+            <span>Isi pengaduan</span>
+            <textarea
+              name="isi"
+              rows="6"
+              placeholder="Jelaskan detail kejadian atau kebutuhan Anda"
+              required
+            ></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button class="btn primary" type="submit">Kirim Pengaduan</button>
+            <a class="btn ghost" href="/">Kembali</a>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

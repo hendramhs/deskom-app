@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tracking - Deskom</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">DESKOM</div>
+      <nav class="nav">
+        <a href="/">Beranda</a>
+        <a href="/pengajuan">Pengajuan Surat</a>
+        <a href="/pengaduan">Pengaduan</a>
+        <a class="active" href="/tracking">Tracking</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Tracking Pengajuan</h2>
+          <p>Daftar pengajuan terbaru beserta statusnya.</p>
+        </div>
+
+        {% if data %}
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Nama</th>
+                <th>Jenis</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for d in data %}
+              <tr>
+                <td>{{ d[1] }}</td>
+                <td>{{ d[2] }}</td>
+                <td><span class="status">{{ d[4] }}</span></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        {% else %}
+        <div class="empty-state">
+          <p>Belum ada pengajuan yang masuk.</p>
+          <a class="btn primary" href="/pengajuan">Buat Pengajuan</a>
+        </div>
+        {% endif %}
+      </section>
+    </main>
+  </body>
+</html>

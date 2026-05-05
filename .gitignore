@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual env
+deskom/
+.env
+
+# VSCode
+.vscode/
+
+# Mac/Linux
+.DS_Store
+
+# Logs
+*.log

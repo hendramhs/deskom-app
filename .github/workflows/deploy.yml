@@ -1,0 +1,17 @@
+name: Deploy to ECS
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Build Docker
+      run: docker build -t desakom .
+
+    # nanti ditambah push ke ECR

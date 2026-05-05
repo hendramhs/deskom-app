@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pengajuan Surat - Deskom</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">DESKOM</div>
+      <nav class="nav">
+        <a href="/">Beranda</a>
+        <a class="active" href="/pengajuan">Pengajuan Surat</a>
+        <a href="/pengaduan">Pengaduan</a>
+        <a href="/tracking">Tracking</a>
+      </nav>
+    </header>
+
+    <main class="container narrow">
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Pengajuan Surat</h2>
+          <p>
+            Lengkapi data berikut agar permohonan dapat diproses lebih cepat.
+          </p>
+        </div>
+
+        <form class="form" method="POST" enctype="multipart/form-data">
+          <label class="field">
+            <span>Nama lengkap</span>
+            <input name="nama" placeholder="Contoh: Rina Kartika" required />
+          </label>
+
+          <label class="field">
+            <span>Jenis surat</span>
+            <input
+              name="jenis"
+              placeholder="Surat Domisili, Surat Usaha, dll"
+              required
+            />
+          </label>
+
+          <label class="field">
+            <span>Unggah dokumen</span>
+            <input type="file" name="file" required />
+            <small>Format disarankan PDF/JPG. Maksimal 5MB.</small>
+          </label>
+
+          <div class="form-actions">
+            <button class="btn primary" type="submit">Kirim Pengajuan</button>
+            <a class="btn ghost" href="/tracking">Lihat Tracking</a>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
